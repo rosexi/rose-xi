@@ -7,18 +7,22 @@ const socials = [
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col items-center px-6 py-16 sm:py-24">
-      <div className="w-full max-w-2xl flex flex-col min-h-screen">
-        <header>
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+    <div className="flex min-h-screen flex-col items-center justify-center px-6 py-16 sm:py-24">
+      <div className="w-full max-w-2xl">
+        <header className="animate-fade-up" style={{ "--delay": "0s" } as React.CSSProperties}>
+          <div className="mb-6 h-24 w-24 rounded-full bg-muted/20" aria-hidden="true" />
+          <h1 className="font-serif text-4xl sm:text-5xl font-normal tracking-tight leading-tight">
             Rose Xi
           </h1>
-          <p className="mt-2 text-base sm:text-lg text-muted">
+          <p className="mt-2 text-base sm:text-lg text-muted italic">
             Software engineer, builder, and creative thinker.
           </p>
         </header>
 
-        <main className="mt-10 space-y-4 text-base sm:text-lg leading-relaxed">
+        <main
+          className="animate-fade-up mt-10 space-y-4 text-base sm:text-lg leading-relaxed"
+          style={{ "--delay": "0.15s" } as React.CSSProperties}
+        >
           <p>
             Hi, I&apos;m Rose. I love building things that live on the internet
             — from polished products to quick experiments that scratch a creative
@@ -37,7 +41,16 @@ export default function Home() {
           </p>
         </main>
 
-        <nav aria-label="Social links" className="mt-10">
+        <hr
+          className="animate-fade-up mt-10 border-t border-muted/30"
+          style={{ "--delay": "0.3s" } as React.CSSProperties}
+        />
+
+        <nav
+          aria-label="Social links"
+          className="animate-fade-up mt-10"
+          style={{ "--delay": "0.35s" } as React.CSSProperties}
+        >
           <ul className="flex flex-wrap gap-x-6 gap-y-2">
             {socials.map((s) => (
               <li key={s.name}>
@@ -45,7 +58,7 @@ export default function Home() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted transition-colors hover:text-accent"
+                  className="link-underline text-muted transition-colors hover:text-accent"
                 >
                   {s.name}
                 </a>
@@ -54,9 +67,6 @@ export default function Home() {
           </ul>
         </nav>
 
-        <footer className="mt-auto pt-16 pb-8 text-sm text-muted">
-          &copy; {new Date().getFullYear()} Rose Xi
-        </footer>
       </div>
     </div>
   );

@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import { SITE_URL } from "./lib/constants";
 import "./globals.css";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -27,10 +34,22 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Rose Xi",
     description:
       "Software engineer, builder, and creative thinker.",
+    creator: "@rosexi",
+  },
+  keywords: [
+    "Rose Xi",
+    "software engineer",
+    "developer",
+    "portfolio",
+    "builder",
+    "creative thinker",
+  ],
+  other: {
+    "theme-color": "#faf9f7",
   },
   robots: {
     index: true,
@@ -50,6 +69,10 @@ const jsonLd = {
   "@type": "Person",
   name: "Rose Xi",
   url: SITE_URL,
+  jobTitle: "Software Engineer",
+  description:
+    "Software engineer, builder, and creative thinker.",
+  image: `${SITE_URL}/opengraph-image`,
   sameAs: [
     "https://github.com/rosexi",
     "https://linkedin.com/in/rosexi",
@@ -65,7 +88,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${inter.variable} ${instrumentSerif.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
