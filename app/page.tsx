@@ -51,7 +51,7 @@ export default function Home() {
             Rose Xi
           </h1>
           <p className="mt-2 text-base sm:text-lg text-muted italic">
-            Software engineer, builder, and creative thinker.
+            Founder, engineer, designer.
           </p>
         </header>
 
@@ -60,20 +60,20 @@ export default function Home() {
           style={{ "--delay": "0.15s" } as React.CSSProperties}
         >
           <p>
-            Hi, I&apos;m Rose. I love building things that live on the internet
-            — from polished products to quick experiments that scratch a creative
-            itch.
+            Hi, I&apos;m Rose. I build products at the intersection of
+            engineering and design.
           </p>
           <p>
-            I&apos;m drawn to the intersection of engineering and design: writing
-            clean code that ships fast and looks good doing it. Right now
-            I&apos;m especially interested in developer tools, AI-native
-            interfaces, and making complex systems feel simple.
+            I&apos;m a Princeton alum and previously co-founded Remedy Health.
+            I&apos;m currently building Tonic, backed by Accel, Patron, a16z,
+            and Pharrell Williams. I&apos;m especially interested in empowering
+            teachers with technology that deepens human connection, creativity,
+            and confidence.
           </p>
           <p>
-            When I&apos;m not coding you&apos;ll probably find me reading,
-            exploring a new city, or deep in a rabbit hole about something I
-            just discovered.
+            Outside of work, I serve on the board of the American Shikoku Ken
+            Club, train and compete with my dogs, and spend time in my ceramics
+            studio in San Francisco.
           </p>
         </main>
 
