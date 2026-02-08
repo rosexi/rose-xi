@@ -1,8 +1,8 @@
 const socials = [
   { name: "GitHub", href: "https://github.com/rosexi" },
   { name: "LinkedIn", href: "https://linkedin.com/in/rosexi" },
-  { name: "X", href: "https://x.com/rosexi" },
-  { name: "Instagram", href: "https://instagram.com/rosexi" },
+  { name: "X", href: "https://x.com/aurochsandroses" },
+  { name: "Instagram", href: "https://instagram.com/ma.fioso" },
 ];
 
 export default function Home() {
@@ -10,7 +10,11 @@ export default function Home() {
     <div className="flex min-h-screen flex-col items-center justify-center px-6 py-16 sm:py-24">
       <div className="w-full max-w-2xl">
         <header className="animate-fade-up" style={{ "--delay": "0s" } as React.CSSProperties}>
-          <div className="mb-6 h-24 w-24 rounded-full bg-muted/20" aria-hidden="true" />
+          <img
+            src="/profile.png"
+            alt="Rose Xi"
+            className="mb-6 h-24 w-24 rounded-full object-cover"
+          />
           <h1 className="font-serif text-4xl sm:text-5xl font-normal tracking-tight leading-tight">
             Rose Xi
           </h1>
